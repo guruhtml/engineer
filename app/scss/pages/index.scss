@@ -1,3 +1,134 @@
 .section-welcome {
 
 }
+
+
+.section-trainers {
+
+}
+
+.section-headline {
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.14;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 6rem;
+
+    &:before {
+        content:"";
+        width: 4.5rem;
+        height: .1rem;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.c-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem;
+}
+
+.c-grid__item {
+    width: 25%;
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+}
+
+
+.card-item {
+    perspective: 500px;
+
+
+    &:hover {
+        .card-item__inner{
+            transform: rotateY( 180deg );
+        }
+    }
+}
+
+.card-item__inner {
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    width: 27rem;
+    height: 31.5rem;
+}
+
+.card-item__front,
+.card-item__back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+.card-item__back {
+    transform: rotateY( 180deg );
+}
+
+.card-item__front {
+    background-color: #fff;
+
+    .card-item__head {
+        padding: 2rem 2rem 1rem 2rem;
+    }
+}
+
+.card-item__back {
+    background-color: #fff;
+    padding: 3.5rem 2rem;
+
+    .card-item__head {
+        margin-bottom: 2rem;
+    }
+}
+
+.card-item__preview {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 27rem;
+    height: 24rem;
+}
+
+.card-item__head {
+    line-height: 1;
+}
+
+.card-item__title {
+    color: #202020;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+}
+
+.card-item__label {
+    color: #afafaf;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.card-item__content {
+    font-size: 1.2rem;
+    color: #777777;
+    line-break: 1.615;
+    
+    p {
+        margin: 0;
+        + p {
+            margin-top: 1.5rem;
+        }
+    }
+}
