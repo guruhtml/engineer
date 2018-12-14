@@ -22,7 +22,7 @@ html {
 	font-size: 10px;
 
 	@media (max-width: 1023px) {
-		@include fluid-type(320px, 1200px, 5px, 10px);
+		@include fluid-type(568px, 1200px, 4px, 10px);
 	}
 }
 
@@ -98,4 +98,10 @@ article {
 
 @media (max-width: $mobile-screen) {
 
+}
+
+@media (max-width: 568px) {
+	html {
+		font-size: 10px;
+	}
 }

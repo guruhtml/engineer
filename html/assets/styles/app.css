@@ -414,14 +414,15 @@ template {
 .layout-header__link {
   font-size: 1.4rem;
   font-weight: 700;
+  display: inline-block;
   margin-left: 2.5rem;
   padding: 1.15rem 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color .3s, color .3s;
   transition: background-color .3s, color .3s;
+  vertical-align: top;
   text-transform: uppercase;
   color: #fff;
-  line-break: 1;
 }
 
 .layout-header__link:hover {
@@ -540,6 +541,15 @@ article {
   -ms-hyphens: auto;
 }
 
+.slider-primary__item {
+  width: 100%;
+  height: 58rem;
+  margin-bottom: 5.5rem;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
 .section-headline {
   font-size: 2.4rem;
   font-weight: 700;
@@ -585,6 +595,9 @@ article {
 }
 
 .card-item {
+  width: 100%;
+  max-width: 27rem;
+  margin: 0 auto;
   -webkit-perspective: 500px;
   perspective: 500px;
 }
@@ -597,6 +610,7 @@ article {
 .card-item__inner {
   width: 27rem;
   height: 31.5rem;
+  margin: 0 auto;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
@@ -638,7 +652,7 @@ article {
 }
 
 .card-item__preview {
-  width: 27rem;
+  width: 100%;
   height: 24rem;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -678,15 +692,64 @@ article {
   margin-top: 1.5rem;
 }
 
-@media (max-width: 1023px) {
-  html {
-    font-size: 5px;
+@media (max-width: 1200px) {
+  .card-item__inner {
+    max-width: 24rem;
   }
 }
 
-@media screen and (max-width: 1023px) and (min-width: 320px) {
+@media (max-width: 1023px) {
   html {
-    font-size: calc(5px + 5 * ((100vw - 320px) / 880));
+    font-size: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .c-grid__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .layout-header__inner {
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+
+  .layout-header__menu {
+    text-align: center;
+  }
+
+  .layout-header__link {
+    margin-top: 2rem;
+  }
+
+  .layout-header__logo {
+    margin: 0 auto 3rem;
+  }
+}
+
+@media (max-width: 568px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-grid__item {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 568px) {
+  html {
+    font-size: calc(4px + 6 * ((100vw - 568px) / 632));
   }
 }
 
