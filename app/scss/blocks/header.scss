@@ -1,0 +1,42 @@
+.layout-header {
+   background-color: #202020;
+   padding:3.5rem 0; 
+}
+
+.layout-header__logo {
+    display: block;
+    width: 14rem;
+    height: 2rem;
+    background: url(../images/logos/fitness-time.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.layout-header__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.layout-header__menu {
+    .layout-header__link {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.layout-header__link {
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-break: 1;
+    padding: 1.15rem 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 2.5rem;
+
+    &.active {
+        background-color: $color-primary;
+    }
+}

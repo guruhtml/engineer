@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru").no-js
+	include ../blocks/head
+
+	- var bodyClass = '';
+
+	block vars
+
+	body(class='#{bodyClass}')
+
+		.layout
+
+			include ../blocks/header
+
+			.layout-body
+
+				block content
+				
+		include ../scripts/scripts

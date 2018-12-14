@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+	  box-sizing: inherit;
+}
+
+:active,
+:focus,
+:hover {
+	outline: 0;
+}
+
+html,
+body {
+	height: 100%;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	font-size: 10px;
+
+	@media (max-width: 1023px) {
+		@include fluid-type(320px, 1200px, 5px, 10px);
+	}
+}
+
+body {
+	font-size: 1.3rem;
+	line-height: 1.28;
+	min-width: 320px;
+	font-family: $font-default;
+	font-weight: 400;
+	color: $base-color;
+	-webkit-font-smoothing: antialiased;
+	background-color: $base-bg;
+}
+
+a {
+	text-decoration: none;
+	color: $color-link;
+}
+
+.link-underline {
+	text-decoration-skip: ink;
+}
+
+p {
+	margin: 1.5rem 0;
+}
+
+p:empty {
+	display: none;
+}
+
+input {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+.svg-store {
+	display: none;
+	height: 0;
+	overflow: hidden;
+}
+
+.layout {
+	position: relative;
+	min-height: 100%;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.layout-body {
+	flex: 1 0 auto;
+}
+
+.container {
+	width: 100%;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+article {
+	hyphens: auto;
+}
+
+
+@media (max-width: $table-screen) {
+
+}
+
+@media (max-width: $mobile-screen) {
+
+}
